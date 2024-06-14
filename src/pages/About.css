@@ -26,13 +26,13 @@
   }
   
   .about-section {
-    padding: 60px 20px;
-    min-height: 100vh; /* Ajuster la hauteur à 100% de la hauteur de l'écran */
+    padding: 60px 20px; /* Ajuster la valeur de padding pour contrôler l'espace */
+    min-height: 100vh;
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
+    justify-content: center;
+    align-items: center;
   }
   
   .about-content {
@@ -40,8 +40,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Ajuster la largeur maximale si nécessaire */
+    max-width: 1200px;
+    padding: 20px; /* Ajouter de l'espace intérieur autour du contenu */
   }
+  
   
   .about-image {
     flex: 1; /* Prendre tout l'espace disponible */
