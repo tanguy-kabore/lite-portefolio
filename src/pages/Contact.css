@@ -1,0 +1,132 @@
+/* Variables de couleur */
+:root {
+  --bg-color: #fff;
+  --text-color: #333;
+  --highlight-color: #6cb2eb;
+  --btn-text-color: #fff;
+  --btn-hover-color: #3298dc;
+}
+
+[data-theme="light"] {
+  --bg-color: #fff;
+  --text-color: #333;
+  --highlight-color: #6cb2eb;
+  --btn-bg-color: #6cb2eb; /* Blue button in light mode */
+  --btn-text-color: #fff;
+  --btn-hover-color: #3298dc;
+}
+
+[data-theme="dark"] {
+  --bg-color: #333;
+  --text-color: #fff;
+  --highlight-color: #f0c040;
+  --btn-bg-color: #f0c040; /* Yellow button in dark mode */
+  --btn-text-color: #333;
+  --btn-hover-color: #cca533;
+}
+
+.contact-section {
+  padding: 0px 0;
+}
+
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap */
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image {
+  max-width: 100%;
+  height: 80vh; /* Ajuster la hauteur à 50% de la hauteur de l'écran */
+  max-height: 100%;
+  object-fit: cover; 
+  border-radius: 10px;
+  flex: 1 1 100%; /* Take full width on small screens */
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  flex: 1 1 100%; /* Take full width on small screens */
+  max-width: 400px;
+  background-color: var(--bg-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.flash-message {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row; /* Side by side on medium and larger screens */
+  }
+
+  .contact-image,
+  .contact-form {
+    flex: 1; /* Take equal width */
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-content {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  .contact-image,
+  .contact-form {
+    margin: 10px 0; /* Reduce margin for smaller screens */
+  }
+}

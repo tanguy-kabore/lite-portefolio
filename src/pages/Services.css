@@ -1,0 +1,44 @@
+.services-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Styles spécifiques au thème light */
+[data-theme="light"] .service-item {
+    background-color: #6cb2eb; /* Bleu */
+    color: #fff;
+}
+
+/* Styles spécifiques au thème dark */
+[data-theme="dark"] .service-item {
+    background-color: #f0c040; /* Jaune */
+    color: #333;
+}
