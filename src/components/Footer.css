@@ -1,10 +1,46 @@
-.footer {
-    background-color: var(--navbar-bg);
-    color: var(--navbar-text);
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --highlight-color: #6cb2eb;
+    --btn-text-color: #fff;
+    --btn-hover-color: #3298dc;
+
+    --footer-light-text: #333; /* Texte blanc pour le mode clair */
+    --footer-dark-text: #fff; /* Texte noir pour le mode sombre */
+  }
+  
+  [data-theme="light"] {
+    --bg-color: #fff;
+    --text-color: #333;
+    --highlight-color: #6cb2eb;
+    --btn-bg-color: #6cb2eb; /* Blue button in light mode */
+    --btn-text-color: #fff;
+    --btn-hover-color: #3298dc;
+    --footer-bg: var(--footer-light-bg);
+    --footer-text: var(--footer-light-text);
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #fff;
+    --highlight-color: #f0c040;
+    --btn-bg-color: #f0c040; /* Yellow button in dark mode */
+    --btn-text-color: #333;
+    --btn-hover-color: #cca533;
+    --footer-bg: var(--footer-dark-bg);
+    --footer-text: var(--footer-dark-text);
+  }
+
+  .footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     padding: 20px;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  
   
