@@ -3,19 +3,19 @@ import './Navbar.css';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          {/* <a href="#home">B. Tanguy KABORE</a> */}
+          {/* Logo here if necessary */}
         </div>
-        <div className={`navbar-menu ${isDropdownOpen ? 'active' : ''}`}>
+        <div className={`navbar-menu ${menuActive ? 'active' : ''}`}>
           <ul className="navbar-list">
             <li className="navbar-item"><a href="#home">Home</a></li>
             <li className="navbar-item"><a href="#about">About</a></li>
@@ -23,16 +23,15 @@ const Navbar = () => {
             <li className="navbar-item"><a href="#services">Services</a></li>
             <li className="navbar-item"><a href="#skills">Skills</a></li>
             <li className="navbar-item"><a href="#projects">Projects</a></li>
-            {/* <li className="navbar-item"><a href="#myblog">My Blog</a></li> */}
             <li className="navbar-item"><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <div className="navbar-toggle" onClick={toggleDropdown}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
         <ThemeToggle />
+        <div className={`navbar-toggle ${menuActive ? 'active' : ''}`} onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </div>
     </nav>
   );
