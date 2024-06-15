@@ -1,14 +1,63 @@
-.theme-toggle {
-    background-color: var(--navbar-hover);
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --highlight-color: #6cb2eb;
+    --navbar-hover: #3298dc;
+    --navbar-text: #fff;
+  }
+  
+  [data-theme='dark'] {
+    --bg-color: #333;
+    --text-color: #fff;
+    --highlight-color: #f0c040;
+    --navbar-hover: #cca533;
+    --navbar-text: #333;
+  }
+  
+  .theme-toggle-container {
+    display: flex;
+    align-items: center;
     margin-left: 10px;
   }
   
-  .theme-toggle:hover {
+  .theme-switch {
+    display: none;
+  }
+  
+  .theme-switch-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .theme-switch-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--navbar-hover);
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-switch-switch {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 26px;
+    height: 26px;
     background-color: var(--navbar-text);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .theme-switch:checked + .theme-switch-label .theme-switch-inner {
+    background-color: var(--navbar-hover);
+  }
+  
+  .theme-switch:checked + .theme-switch-label .theme-switch-switch {
+    transform: translateX(26px);
   }
   

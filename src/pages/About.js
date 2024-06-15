@@ -17,7 +17,6 @@ const About = () => {
           <p>I am a fullstack developer and also offer consulting services in the design and implementation of computer networks.</p>
           <ul className="about-details">
             <li><strong>Name:</strong> B. Tanguy KABORE</li>
-            {/* <li><strong>Date of birth:</strong> January 01, 1987</li> */}
             <li><strong>Address:</strong> 11 BP 1853 CMS Ouaga 11</li>
             <li><strong>City:</strong> Ouagadougou</li>
             <li><strong>Email:</strong> baowendnere.kabore@gmail.com</li>

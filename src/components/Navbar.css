@@ -1,65 +1,132 @@
-.navbar {
+/* Variables de couleur */
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --highlight-color: #6cb2eb;
+    --btn-text-color: #fff;
+    --btn-hover-color: #3298dc;
+  }
+  
+  [data-theme="light"] {
+    --bg-color: #fff;
+    --text-color: #333;
+    --highlight-color: #6cb2eb;
+    --btn-bg-color: #6cb2eb; /* Blue button in light mode */
+    --btn-text-color: #fff;
+    --btn-hover-color: #3298dc;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #fff;
+    --highlight-color: #f0c040;
+    --btn-bg-color: #f0c040; /* Yellow button in dark mode */
+    --btn-text-color: #333;
+    --btn-hover-color: #cca533;
+  }
+  
+  .navbar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 10px 0;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    width: 100%;
-    background-color: var(--navbar-bg);
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .navbar-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
   
-  .navbar-logo a {
-    color: var(--navbar-text);
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+  .navbar-logo {
+    /* Styles pour le logo si nécessaire */
   }
   
   .navbar-list {
-    list-style: none;
-    display: flex;
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
   }
   
   .navbar-item {
-    margin: 0 10px;
+    margin-right: 20px;
   }
   
   .navbar-item a {
-    color: var(--navbar-text);
     text-decoration: none;
-    font-size: 16px;
+    color: inherit;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
   }
   
   .navbar-item a:hover {
-    color: var(--navbar-hover);
+    color: var(--highlight-color);
   }
   
-  :root {
-    --navbar-bg: #333;
-    --navbar-text: white;
-    --navbar-hover: #f0c040;
-  }
+  /* Media query pour le dropdown menu */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--bg-color);
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      transform: translateY(-100%);
+    }
   
-  [data-theme="light"] {
-    --navbar-bg: white;
-    --navbar-text: #333;
-    --navbar-hover: #6cb2eb;
-  }
+    .navbar-menu.active {
+      display: block;
+      transform: translateY(0);
+    }
   
-  [data-theme="dark"] {
-    --navbar-bg: #333;
-    --navbar-text: white;
-    --navbar-hover: #f0c040;
+    .navbar-list {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .navbar-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+    }
+  
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 5px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  
+    .navbar-toggle.active .bar:first-child {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+  
+    .navbar-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar-toggle.active .bar:last-child {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
   }
   

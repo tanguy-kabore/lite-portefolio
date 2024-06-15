@@ -52,18 +52,22 @@
   
   .about-image img {
     max-width: 100%;
-    height: 80vh; /* Ajuster la hauteur à 50% de la hauteur de l'écran */
-    max-height: 100%;
+    height: auto; /* Ajuste la hauteur de l'image automatiquement */
     object-fit: cover;
     object-position: 50% 25%; /* Ajuster la position pour rogner 25% du bas */
     border-radius: 10px;
   }
   
   .about-text {
-    flex: 1; /* Prendre tout l'espace disponible */
-    padding: 20px; /* Espacement interne */
-    text-align: left; /* Aligner le texte à gauche */
+    flex: 1;
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: left;
+    word-wrap: break-word; /* Assure que les mots se cassent */
+    overflow-wrap: break-word; /* Gère le débordement du contenu */
   }
+  
   
   .about-text h2 {
     font-size: 2.5rem;
@@ -90,7 +94,7 @@
   }
   
   .about-details li strong {
-    min-width: 150px; /* Largeur minimale pour le label */
+    min-width: 70px; /* Largeur minimale pour le label */
     margin-right: 10px; /* Espacement entre le label et le contenu */
     color: var(--highlight-color);
   }
@@ -115,15 +119,18 @@
   /* Media queries pour le responsive */
   @media (max-width: 768px) {
     .about-content {
-      flex-direction: column; /* Empiler verticalement sur les petits écrans */
+      flex-direction: column; /* Empile verticalement sur les petits écrans */
       align-items: center; /* Centrer horizontalement */
       text-align: center; /* Centrer le texte horizontalement */
     }
   
     .about-image,
     .about-text {
-      padding: 20px 0; /* Espacement interne */
-      text-align: center; /* Centrer le contenu sur les petits écrans */
+      padding: 20px 0; /* Espacement interne sur les côtés */
+    }
+  
+    .about-text {
+      text-align: center; /* Centrer le texte sur les petits écrans */
     }
   }
   

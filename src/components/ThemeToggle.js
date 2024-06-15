@@ -13,9 +13,19 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button className="theme-toggle" onClick={toggleTheme}>
-      {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-    </button>
+    <div className="theme-toggle-container">
+      <input
+        type="checkbox"
+        id="theme-switch"
+        className="theme-switch"
+        checked={theme === 'dark'}
+        onChange={toggleTheme}
+      />
+      <label htmlFor="theme-switch" className="theme-switch-label">
+        <span className="theme-switch-inner" />
+        <span className="theme-switch-switch" />
+      </label>
+    </div>
   );
 };
 
