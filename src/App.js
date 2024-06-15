@@ -26,8 +26,8 @@ function App() {
           <h1>Resume</h1>
           <Resume />
         </section>
-        <section id="resume" className="section">
-          <h1>Schooling</h1>
+        <section id="school" className="section">
+          <h1>School</h1>
           <School />
         </section>
         <section id="services" className="section">

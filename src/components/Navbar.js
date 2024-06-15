@@ -20,6 +20,7 @@ const Navbar = () => {
             <li className="navbar-item"><a href="#home">Home</a></li>
             <li className="navbar-item"><a href="#about">About</a></li>
             <li className="navbar-item"><a href="#resume">Resume</a></li>
+            <li className="navbar-item"><a href="#school">School</a></li>
             <li className="navbar-item"><a href="#services">Services</a></li>
             <li className="navbar-item"><a href="#skills">Skills</a></li>
             <li className="navbar-item"><a href="#projects">Projects</a></li>
