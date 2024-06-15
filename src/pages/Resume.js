@@ -7,7 +7,7 @@ const Resume = () => {
             <div className="resume-content">
                 <div className="resume-item">
                     <h2>Chief Information Officer</h2>
-                    <p className="resume-date">2023-Present</p>
+                    <p className="resume-date">2023-Now</p>
                     <p className="resume-description">
                         Responsible for overseeing the direction of information systems.
                     </p>
@@ -35,7 +35,7 @@ const Resume = () => {
                     <p className="resume-description">
                         Researching Artificial Intelligence for automatic recognition of human skin diseases.
                     </p>
-                    <p className="resume-institution">Norbert Zongo University, Ouagadougou</p>
+                    <p className="resume-institution">Norbert Zongo University, Koudougou</p>
                 </div>
                 <div className="resume-item">
                     <h2>Software Engineering Engineer</h2>

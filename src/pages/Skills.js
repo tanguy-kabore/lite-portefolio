@@ -49,8 +49,8 @@ const Skills = () => {
           <SkillItem title="Postgres" percentage={85} icon={postgresIcon} />
           <SkillItem title="Oracle" percentage={85} icon={oracleIcon} />
           <SkillItem title="Docker" percentage={75} icon={dockerIcon} />
-          <SkillItem title="Python" percentage={90} icon={pythonIcon} />
-          <SkillItem title="Scrum" percentage={85} icon={scrumIcon} />
+          <SkillItem title="Python" percentage={70} icon={pythonIcon} />
+          <SkillItem title="Scrum" percentage={90} icon={scrumIcon} />
           {/* Ajoutez d'autres compétences au besoin */}
         </div>
       </div>
