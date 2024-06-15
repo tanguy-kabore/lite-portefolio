@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
+import School from './pages/School';
 import Services from './pages/Services';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
@@ -24,6 +25,10 @@ function App() {
         <section id="resume" className="section">
           <h1>Resume</h1>
           <Resume />
+        </section>
+        <section id="resume" className="section">
+          <h1>Schooling</h1>
+          <School />
         </section>
         <section id="services" className="section">
           <h1>Services</h1>
