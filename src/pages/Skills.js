@@ -13,6 +13,10 @@ import oracleIcon from '../assets/oracle-icon.png';
 import dockerIcon from '../assets/docker-icon.png';
 import pythonIcon from '../assets/python-icon.png';
 import scrumIcon from '../assets/scrum-icon.png';
+import networkIcon from '../assets/network-icon.png'; // Ajoutez cette ligne
+import gitIcon from '../assets/git-icon.png'; // Ajoutez cette ligne
+import umlIcon from '../assets/uml-icon.png'; // Ajoutez cette ligne
+
 
 const SkillItem = ({ title, percentage, icon }) => {
   return (
@@ -51,6 +55,9 @@ const Skills = () => {
           <SkillItem title="Docker" percentage={75} icon={dockerIcon} />
           <SkillItem title="Python" percentage={70} icon={pythonIcon} />
           <SkillItem title="Scrum" percentage={90} icon={scrumIcon} />
+          <SkillItem title="Network" percentage={95} icon={networkIcon} /> {/* Ajoutez cette ligne */}
+          <SkillItem title="Git" percentage={90} icon={gitIcon} /> {/* Ajoutez cette ligne */}
+          <SkillItem title="UML" percentage={95} icon={umlIcon} /> {/* Ajoutez cette ligne */}
           {/* Ajoutez d'autres compétences au besoin */}
         </div>
       </div>
