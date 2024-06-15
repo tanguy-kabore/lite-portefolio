@@ -13,6 +13,7 @@
   
   .resume-item {
     width: 100%; /* Full width on small screens */
+    border: 1px solid var(--border-color);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
