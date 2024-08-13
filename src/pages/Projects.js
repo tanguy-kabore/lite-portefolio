@@ -55,7 +55,7 @@ const Projects = () => {
                     description="Lite Library is a simple and fast online library built with React.js and Next.js."
                     image={projectImage4}
                     githubLink="https://github.com/tanguy-kabore/lite-library"
-                    liveDemoLink="https://vercel.com/baowendneres-projects/lite-library"
+                    liveDemoLink="https://lite-library-ozhd331y3-baowendneres-projects.vercel.app/"
                 />
             </div>
         </section>
